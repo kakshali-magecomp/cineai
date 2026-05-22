@@ -46,11 +46,7 @@ export default function Login() {
         window.dispatchEvent(new Event("storage"));
 
         setSuccess(true);
-        
-        // Instantly redirect active viewport layout to dashboard deck
-        setTimeout(() => {
-            navigate("/");
-        }, 1500);
+        navigate("/");
     };
 
     return (

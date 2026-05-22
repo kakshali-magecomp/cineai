@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Register() {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({//Stores all input values.
         username: "",
         email: "",
         password: "",
         confirmPassword: ""
     });
-    const [error, setError] = useState("");
-    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState("");//store error msg
+    const [success, setSuccess] = useState(false);//show succsess msg after registration
     
     const navigate = useNavigate();
 
@@ -21,9 +21,8 @@ export default function Register() {
         e.preventDefault();
         setError("");
 
-        //Client-side Form Validation checks
         if (!formData.username || !formData.email || !formData.password) {
-            setError("Please fill out all mandatory registration fields.");
+            setError("Please fill out all registration fields.");
             return;
         }
 
@@ -58,10 +57,8 @@ export default function Register() {
         localStorage.setItem("cineai_users", JSON.stringify(existingUsers));
 
         setSuccess(true);
-        
-        setTimeout(() => {
-            navigate("/login");
-        }, 2000);
+        navigate("/login");
+       
     };
 
     return (

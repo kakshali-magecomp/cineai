@@ -49,7 +49,7 @@ export default function Footer() {
                         </h2>
 
                         <p className="text-gray-400 text-sm mb-2">
-                            📧 movieapp@gmail.com
+                            📧 movieq@gmail.com
                         </p>
 
                         <p className="text-gray-400 text-sm mb-2">

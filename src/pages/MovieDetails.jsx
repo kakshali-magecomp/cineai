@@ -4,7 +4,6 @@ import { useParams, Link } from "react-router-dom";
 export default function MovieDetails() {
 
     const { id } = useParams();
-
     const [movie, setMovie] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -61,7 +60,6 @@ export default function MovieDetails() {
             <div className="max-w-6xl mx-auto px-6 -mt-40 relative z-10 pt-[200px]">
                 <div className="grid md:grid-cols-3 gap-8">
 
-                    {/* MOVIE IMAGE */}
                     <div className="bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
                         <img src={movie.image?.original || movie.image?.medium} alt={movie.name}
                             className="w-full h-full object-cover"
@@ -69,14 +67,11 @@ export default function MovieDetails() {
 
                     </div>
 
-                    {/* MOVIE DETAILS */}
                     <div className="md:col-span-2">
-                        {/* TITLE */}
                         <h1 className="text-4xl md:text-5xl font-bold mb-4">
                             {movie.name}
                         </h1>
 
-                        {/* RATING */}
                         <div className="flex items-center gap-4 mb-5">
                             <div className="bg-yellow-500 text-black px-3 py-1 rounded-lg font-bold">
                                 ⭐ {movie.rating?.average || "N/A"}
@@ -105,8 +100,8 @@ export default function MovieDetails() {
                             </h2>
 
                             <p className="text-gray-300 leading-7"
-                                dangerouslySetInnerHTML={{
-                                    __html:
+                                dangerouslySetInnerHTML={{//show html contain in react
+                                    __html://object
                                         movie.summary ||
                                         "No Summary Available",
                                 }}
@@ -114,7 +109,6 @@ export default function MovieDetails() {
 
                         </div>
 
-                        {/* EXTRA DETAILS */}
                         <div className="grid sm:grid-cols-2 gap-4 mb-8">
 
                             <div className="bg-slate-900 p-4 rounded-xl border border-slate-800">
@@ -159,10 +153,9 @@ export default function MovieDetails() {
 
                         </div>
 
-                        {/* BUTTONS */}
                         <div className="flex gap-4">
 
-                            <a href="#" rel="noreferrer" className="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-xl font-bold transition">
+                            <a href="#" className="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-xl font-bold transition">
                                 Watch Now
                             </a>
 

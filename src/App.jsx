@@ -6,6 +6,7 @@ import MovieDetails from "./pages/MovieDetails";
 import Register from "./pages/Register"; 
 import Login from "./pages/Login"; 
 import Footer from "./components/Footer";
+import WatchList from "./pages/WatchList";
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
         <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        {/* <Route path="/footer" element={<Footer />} /> */}
+        <Route path="/watchlist" element={<WatchList />} />
       </Routes>
       <Footer />
     </>

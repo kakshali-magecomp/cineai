@@ -55,6 +55,11 @@ export default function Navbar() {
                                 About
                             </Link>
                         </li>
+                        <li>
+                            <Link to="/watchlist" className="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors duration-200">
+                                WhatchList
+                            </Link>
+                        </li>
                         
                     </ul>
 
