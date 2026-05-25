@@ -36,7 +36,7 @@ export default function Register() {
             return;
         }
 
-        //Check if the user email database key already exists inside localStorage
+        //Check if the user email key already exists inside localStorage
         const existingUsers = JSON.parse(localStorage.getItem("cineai_users") || "[]");
         const userExists = existingUsers.some((user) => user.email === formData.email);
 
@@ -66,7 +66,6 @@ export default function Register() {
             <div className="w-full max-w-md bg-slate-900/60 border border-slate-800 backdrop-blur-xl p-8 rounded-2xl shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl -z-10"></div>
                 
-                {/* Header Title Typography */}
                 <div className="text-center mb-8">
                     <h2 className="text-2xl font-black tracking-tight text-white mb-2">
                         Create Your Account
@@ -76,7 +75,6 @@ export default function Register() {
                     </p>
                 </div>
 
-                {/* Status Banners Notification Area */}
                 {error && (
                     <div className="mb-5 p-3 rounded-lg bg-red-500/10 border border-red-500/20 text-xs font-medium text-red-400 text-center">
                         {error}
@@ -88,7 +86,6 @@ export default function Register() {
                     </div>
                 )}
 
-                {/* Interactive Submission Form Layout */}
                 <form onSubmit={handleRegister} className="space-y-4">
                     <div>
                         <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Username</label>

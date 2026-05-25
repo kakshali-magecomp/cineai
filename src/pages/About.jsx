@@ -21,7 +21,6 @@ export default function About() {
     return (
         <div className="min-h-screen bg-black text-white pb-[20px]">
 
-            {/* HERO SECTION */}
             <div className="text-center py-20 px-6">
 
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -36,14 +35,10 @@ export default function About() {
 
             </div>
 
-            {/* FEATURES */}
             <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
 
                 {features.map((feature, idx) => (
-                    <div
-                        key={idx}
-                        className="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-500 transition"
-                    >
+                    <div key={idx} className="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-500 transition">
 
                         <div className="text-5xl mb-4">
                             {feature.icon}
@@ -62,7 +57,6 @@ export default function About() {
 
             </div>
 
-            {/* BOTTOM SECTION */}
             <div className="max-w-4xl mx-auto mt-20 px-6">
 
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl p-10 text-center">

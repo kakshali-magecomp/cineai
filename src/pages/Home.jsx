@@ -7,7 +7,6 @@ export default function Home() {
     const [filteredMovies, setFilteredMovies] = useState([]);//Stores filtered/search movies.
     const [searchQuery, setSearchQuery] = useState("");//Stores search input value.
     const [loading, setLoading] = useState(true);
-
     // PAGINATION
     const [currentPage, setCurrentPage] = useState(1);//Stores current pagination page.
     const moviesPerPage = 16;

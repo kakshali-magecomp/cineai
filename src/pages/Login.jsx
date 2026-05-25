@@ -19,13 +19,13 @@ export default function Login() {
         e.preventDefault();
         setError("");
 
-        //Structural input validation checks
+        //validation 
         if (!formData.email || !formData.password) {
             setError("Please fill out all mandatory fields.");
             return;
         }
 
-        //Fetch local storage mock directory array 
+        //Fetch local storage array 
         const existingUsers = JSON.parse(localStorage.getItem("cineai_users") || "[]");
         
         //Look up exact credential key combinations
